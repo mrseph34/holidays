@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='static/styles.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Public Holidays in the US <h1>
+    {% for result in data %}
+    <div>
+        <h3>{{result['name']}}</h3>
+        <p>Locally known as: {{result['localName']}}</p>
+        <p>Year created: {{result['launchYear']}}</p>
+        <p>Date celebrated: {{result['date']}}</p>
+
+    </div>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='static/styles.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <a id="no" href="/holidays" style="color: aqua;">Holidays</a><br>
+    <a id="search" href="/holidays/search?title=" onclick="addCode()" style="color: burlywood;" >Holidays Search</a>
+    <input style="width: 155px;" id="txt" type="text" value="Search"></a>
+
+    <script type="text/javascript">
+        function addCode() {
+          val = document.getElementById("txt").value; 
+          document.getElementById("search").href += val;
+          } 
+       </script>
+</body>
+</html>

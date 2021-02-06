@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Holiday Searched</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' media='screen' href='static/styles.css'>
+    </head>
+    <body>
+        <h1>Here are the searched US holiday results:</h1>
+        {% for result in data %}
+        <div>
+            <h3>{{result['name']}}</h3>
+            <p>Locally known as: {{result['localName']}}</p>
+            <p>Year created: {{result['launchYear']}}</p>
+            <p>Date celebrated: {{result['date']}}</p>
+    
+        </div>
+    {% endfor %}
+    </body>
+</html>
